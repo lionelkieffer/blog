@@ -1,0 +1,3 @@
+-- Envoi d'un message dans ACTIVE MQ via API REST/JMS.
+-- Le user mot de passe est admin:admin (encode en base 64 via l'authentification basique). 
+Values SYSTOOLS.HTTPPOSTCLOB('http://serveur_amq:8161/api/message/MA_FILE?type=queue',  '<httpHeader><header name="Authorization" value="Basic YWRtaW46YWRtaW4=" /><header name="Content-Type" value="text/plain" /></httpHeader>', 'body=Message envoyé à partir de l''IBM I')
